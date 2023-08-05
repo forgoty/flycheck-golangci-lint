@@ -104,7 +104,7 @@ See URL `https://github.com/golangci/golangci-lint'."
    (info line-start (seq "level=warning" (zero-or-more nonl) "[") (file-name) ":" line ":" column ": " (message) line-end)
    (error line-start (file-name) ":" line ":" column ": " (message) line-end)
    (error line-start (file-name) ":" line ":" (message) line-end))
-  :modes go-mode)
+  :modes go-ts-mode go-mode)
 
 ;;;###autoload
 (defun flycheck-golangci-lint-setup ()
